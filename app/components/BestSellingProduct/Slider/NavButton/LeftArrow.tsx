@@ -1,8 +1,12 @@
-const LeftArrow = () => {
+interface LeftArrowProps {
+  scroll: () => void
+}
+
+const LeftArrow: React.FC<LeftArrowProps> = ({ scroll }) => {
   return (
     <div
       className='cursor-pointer rounded-full bg-[#dedededd] p-1'
-      onClick={() => alert('click left arrow')}
+      onClick={scroll}
     >
       <svg
         xmlns='http://www.w3.org/2000/svg'
