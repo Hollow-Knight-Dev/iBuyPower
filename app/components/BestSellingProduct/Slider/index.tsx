@@ -15,7 +15,7 @@ const Slider = () => {
   } = useSliderScroll()
 
   return (
-    <div className='flex w-full flex-col'>
+    <div className='flex w-full flex-col items-center'>
       <div className='mr-4 self-end'>
         <NavButton
           scrollToLeft={clickScrollLeft}
@@ -28,7 +28,7 @@ const Slider = () => {
         onMouseUp={onMouseAway}
         onMouseLeave={onMouseAway}
         onMouseMove={onMouseMove}
-        className='hide-scrollbar flex w-full overflow-x-auto py-5'
+        className='hide-scrollbar flex w-[375px] overflow-x-auto py-5 sm:w-full'
       >
         {data.map((item, index) => {
           return (

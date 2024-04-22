@@ -13,7 +13,7 @@ const NavButton: React.FC<NavButtonProps> = ({
   scrollToRight
 }) => {
   return (
-    <div className='flex gap-5'>
+    <div className='hidden gap-5 sm:flex'>
       <LeftArrow scroll={scrollToLeft} />
       <RightArrow scroll={scrollToRight} />
     </div>
