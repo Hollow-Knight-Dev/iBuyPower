@@ -2,7 +2,6 @@ import { useCallback, useRef, useState } from 'react'
 
 const useSliderScroll = () => {
   const [isDragging, setIsDragging] = useState(false)
-  const [maxScrollLeft, setMaxScrollLeft] = useState(0)
   const startPos = useRef(0)
   const scrollLeft = useRef(0)
 
