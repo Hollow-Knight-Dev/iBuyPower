@@ -1,5 +1,6 @@
 'use client'
 import ProductCard from '../ProductCard'
+import { data } from '../utils/data'
 import NavButton from './NavButton'
 import useSliderScroll from './useSliderScroll'
 
@@ -29,16 +30,13 @@ const Slider = () => {
         onMouseMove={onMouseMove}
         className='hide-scrollbar flex w-full overflow-x-auto py-5'
       >
-        {Array(8)
-          .fill('')
-          .map((_, index) => {
-            return (
-              <div key={index} className='h-fit w-fit'>
-                <p>{index}</p>
-                <ProductCard />
-              </div>
-            )
-          })}
+        {data.map((item, index) => {
+          return (
+            <div key={index} className='h-fit w-fit'>
+              <ProductCard data={item} />
+            </div>
+          )
+        })}
       </div>
     </div>
   )
