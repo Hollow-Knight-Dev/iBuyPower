@@ -1,3 +1,4 @@
+import { basePath } from '@/next.config'
 import Image from 'next/image'
 import { ProductData } from '../../utils/data'
 import ActionButton from '../ActionButton'
@@ -47,7 +48,7 @@ const LowerPart: React.FC<ProductCardProps> = ({ data }) => {
           with
         </p>
         <Image
-          src='/images/icon-affirm.svg'
+          src={`${basePath}/images/icon-affirm.svg`}
           alt='icon-affirm'
           width={35}
           height={20}
